@@ -1,0 +1,20 @@
+.vscode/
+
+# Compiled files
+*.class
+*.jar
+*.log
+
+# OS files
+.DS_Store
+
+# IDE files
+.idea/
+*.iml
+
+# Build folders
+target/
+bin/
+build/
+dist/
+out/
