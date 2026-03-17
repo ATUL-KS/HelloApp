@@ -2,24 +2,25 @@ public class HelloApp {
 
     public static void main(String[] args) {
 
-        String name;
+        StringBuilder nameBuilder = new StringBuilder();
 
-        if (args.length > 0) {
-            StringBuilder nameBuilder = new StringBuilder();
+        if (args.length == 0) {
+            nameBuilder.append("World");
+        } else {
 
-            for (int i = 0; i < args.length; i++) {
-                nameBuilder.append(args[i]);
+            boolean first = true;
 
-                if (i < args.length - 1) {
+            for (String name : args) {
+
+                if (!first) {
                     nameBuilder.append(", ");
                 }
-            }
 
-            name = nameBuilder.toString();
-        } else {
-            name = "World";
+                nameBuilder.append(name);
+                first = false;
+            }
         }
 
-        System.out.println("Hello, " + name + "!");
+        System.out.println("Hello, " + nameBuilder.toString() + "!");
     }
 }
